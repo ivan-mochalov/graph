@@ -34,7 +34,7 @@ public class G {
      * The method adds new vertex to the graph.
      * Null parameters are not supported.
      *
-     * @param graph  graph object. you can creat one with {@link #createDirectedGraph()} or {@link #createUndirectedGraph()}
+     * @param graph  graph object. you can create one with {@link #createDirectedGraph()} or {@link #createUndirectedGraph()}
      * @param vertex new vertex
      * @param <T>    user defined vertex type
      */
@@ -43,13 +43,12 @@ public class G {
     }
 
     /**
-     * The method adds new edge to the graph. Be aware the graph must contain the vertices you enter as edge.
-     * Null values are not supported.
+     * The method adds new edge to the graph. Be aware the graph must contain the vertices you have entered as edge.
      * In case of directed graph, the direction means from the first vertex to the second one.
      * For undirected graph, the both of edges 'A-B' and 'B-A' are correct in such case.
      * Null parameters are not supported.
      *
-     * @param graph        graph object. you can creat one with {@link #createDirectedGraph()} or {@link #createUndirectedGraph()}
+     * @param graph        graph object. you can create one with {@link #createDirectedGraph()} or {@link #createUndirectedGraph()}
      * @param firstVertex  first vertex
      * @param secondVertex second vertex
      * @param <T>          user defined vertex type
@@ -60,7 +59,7 @@ public class G {
 
     /**
      * The method return the list of edges represented as a string. Return value like 'A-B-C' means two edges:
-     * 'A-B' and 'B-C'. So you can imagine the '-' is an edge. In case of the end vertex cannot be reached you'll get empty value.
+     * 'A-B' and 'B-C'. So you can imagine the '-' is the edge. In case of the end vertex cannot be reached you'll get empty value.
      * Null parameters are not supported.
      *
      * @param graph       graph object. you can creat one with {@link #createDirectedGraph()} or {@link #createUndirectedGraph()}
