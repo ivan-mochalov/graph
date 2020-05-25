@@ -5,10 +5,12 @@ import org.example.graph.entity.Graph;
 
 import java.util.*;
 
+import static org.example.graph.util.Constants.*;
+
 public class GraphService {
     public <T> void addVertex(@NonNull Graph<T> graph, @NonNull T vertex) {
         if (graph.getVertices().contains(vertex)) {
-            throw new IllegalArgumentException(String.format("The vertex already exists in the graph: %s", vertex));
+            throw new IllegalArgumentException(String.format(VERTEX_EXISTS_ERROR_MESSAGE, vertex));
         } else {
             graph.getVertices().add(vertex);
         }
@@ -28,13 +30,13 @@ public class GraphService {
                 addEdgeToUndirectedGraph(graph.getEdges(), firstVertex, secondVertex);
                 break;
             default:
-                throw new UnsupportedOperationException(String.format("%s graph cannot contains edges", currentGraphType));
+                throw new UnsupportedOperationException(String.format(ADD_EDGE_UNSUPPORTED_ERROR_MESSAGE, currentGraphType));
         }
     }
 
     private <T> void checkVertexExistence(Set<T> vertices, T vertex) {
         if (!vertices.contains(vertex)) {
-            throw new IllegalArgumentException(String.format("The edge contains unknown vertex: %s", vertex));
+            throw new IllegalArgumentException(String.format(UNKNOWN_VERTEX_ERROR_MESSAGE, vertex));
         }
     }
 
